@@ -25,12 +25,23 @@ See `requirements.txt` for full dependencies.
 - **[View Demo in Browser](demo.html)** - Click to open interactive demonstration
 - **Demo Visualization:** [demo_video_frame.png](demo_video_frame.png)
 
+**Live Video Demonstrations:**
+- **`live_demo_display.py`** - Real-time display showing CMU-MOSI video with live predictions (perfect for screen recording!)
+- **`create_demo_video_file.py`** - Creates an actual MP4 video file showing the processing pipeline
+
 The demo shows:
 - Feature extraction from all three modalities
 - Model architecture visualization
 - Sentiment prediction on a -3 to +3 scale
+- Real-time processing of actual CMU-MOSI videos
 
-**Run Your Own Demo:**
+**Run Live Demo (for screen recording):**
+```bash
+python live_demo_display.py
+```
+This opens a window showing the video playing with real-time sentiment predictions overlaid. Perfect for recording with OBS or screen recording software!
+
+**Run Single Sample Demo:**
 ```bash
 python demo_single_sample.py
 ```
