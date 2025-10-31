@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimodal Sentiment Analysis - Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .demo-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .modality-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .modality-card h3 {
+            margin-top: 0;
+            color: #ffd700;
+        }
+        .modality-card.visual { border-color: cyan; }
+        .modality-card.audio { border-color: lime; }
+        .modality-card.text { border-color: magenta; }
+        .prediction-box {
+            background: rgba(255,215,0,0.2);
+            border: 3px solid gold;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .sentiment-score {
+            font-size: 4em;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        .sentiment-label {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        .sentiment-scale {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        .scale-point {
+            text-align: center;
+            padding: 10px;
+            flex: 1;
+        }
+        .instructions {
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .code-block {
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Multimodal Sentiment Analysis</h1>
+        <p class="subtitle">Live Demonstration - CMU-MOSEI Dataset</p>
+        
+        <div class="demo-section">
+            <div class="modality-card visual">
+                <h3>📹 Visual Modality</h3>
+                <p><strong>Features:</strong> 713 dimensions</p>
+                <p><strong>Source:</strong> OpenFace2 facial analysis</p>
+                <p><strong>Extraction:</strong> Frame-by-frame video analysis</p>
+            </div>
+            
+            <div class="modality-card audio">
+                <h3>🔊 Audio Modality</h3>
+                <p><strong>Features:</strong> 74 dimensions</p>
+                <p><strong>Source:</strong> COVAREP acoustic features</p>
+                <p><strong>Extraction:</strong> MFCC, chroma, spectral features</p>
+            </div>
+            
+            <div class="modality-card text">
+                <h3>📝 Text Modality</h3>
+                <p><strong>Features:</strong> 300 dimensions</p>
+                <p><strong>Source:</strong> GloVe word vectors</p>
+                <p><strong>Extraction:</strong> Transcript analysis</p>
+            </div>
+        </div>
+        
+        <div class="prediction-box">
+            <h2>Predicted Sentiment</h2>
+            <div class="sentiment-score">+1.85</div>
+            <div class="sentiment-label">Positive</div>
+            
+            <div class="sentiment-scale">
+                <div class="scale-point" style="background: rgba(255,0,0,0.5);">Very Negative<br>-3</div>
+                <div class="scale-point" style="background: rgba(255,100,100,0.5);">Negative<br>-1.5</div>
+                <div class="scale-point" style="background: rgba(128,128,128,0.5);">Neutral<br>0</div>
+                <div class="scale-point" style="background: rgba(100,255,100,0.5);">Positive<br>+1.5</div>
+                <div class="scale-point" style="background: rgba(0,255,0,0.5);">Very Positive<br>+3</div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>🚀 Run Your Own Demo</h2>
+            <p>To create a demonstration with your own data:</p>
+            <div class="code-block">
+python demo_single_sample.py
+            </div>
+            <p>This will:</p>
+            <ul>
+                <li>Load a sample from CMU-MOSI dataset</li>
+                <li>Extract features from video, audio, and transcript</li>
+                <li>Run inference using the trained model</li>
+                <li>Generate visualization images</li>
+            </ul>
+            
+            <h3>📹 Creating a Demo Video</h3>
+            <p>See <a href="DEMO_GUIDE.md">DEMO_GUIDE.md</a> for complete instructions on creating a demonstration video for your MIT Slideroom submission.</p>
+            
+            <h3>🔗 Repository Links</h3>
+            <ul>
+                <li><a href="README.md">📖 README</a> - Complete project documentation</li>
+                <li><a href="train_mosei_only.py">🔬 Training Script</a> - Main training code</li>
+                <li><a href="demo_single_sample.py">🎬 Demo Script</a> - Single sample demonstration</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

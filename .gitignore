@@ -41,11 +41,15 @@ env/
 
 # Results and outputs
 *.json
-*.png
 *.jpg
 *.jpeg
 *.csv
-*.txt
+# Allow demo files
+!demo.html
+!demo_video_frame.png
+!demo_simple.png
+!demo_visualization.png
+!*.txt
 !requirements.txt
 
 # IDE

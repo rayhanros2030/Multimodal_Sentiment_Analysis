@@ -19,14 +19,25 @@ A PyTorch implementation of multimodal sentiment analysis using CMU-MOSEI and IE
 
 See `requirements.txt` for full dependencies.
 
+## 🎬 Live Demo
+
+Check out the interactive demo:
+- **`demo.html`** - Open in your browser for an interactive demonstration
+- **`demo_video_frame.png`** - Static visualization frame showing the system architecture
+
+Or run your own demo:
+```bash
+python demo_single_sample.py
+```
+
 ## 🚀 Quick Start
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/multimodal-sentiment-analysis.git
-cd multimodal-sentiment-analysis
+git clone https://github.com/rayhanros2030/Multimodal-Sentiment-Analysis.git
+cd Multimodal-Sentiment-Analysis
 
 # Install dependencies
 pip install -r requirements.txt
@@ -112,8 +123,13 @@ Training progress is tracked and visualized with MAE and Correlation plots.
 multimodal-sentiment-analysis/
 ├── train_mosei_only.py          # Main training script (CMU-MOSEI only)
 ├── train_combined_final.py      # Combined CMU-MOSEI + IEMOCAP training
+├── demo_single_sample.py        # Single sample demonstration script
+├── create_demo_video.py         # Generate demo content
+├── demo.html                     # Interactive HTML demo
+├── demo_video_frame.png         # Demo visualization frame
 ├── requirements.txt              # Python dependencies
 ├── README.md                     # This file
+├── DEMO_GUIDE.md                 # Demo video creation guide
 └── .gitignore                   # Git ignore rules
 ```
 
