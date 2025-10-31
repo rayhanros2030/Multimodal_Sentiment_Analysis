@@ -21,14 +21,21 @@ See `requirements.txt` for full dependencies.
 
 ## 🎬 Live Demo
 
-Check out the interactive demo:
-- **`demo.html`** - Open in your browser for an interactive demonstration
-- **`demo_video_frame.png`** - Static visualization frame showing the system architecture
+**Interactive Demo Available:**
+- **[View Demo in Browser](demo.html)** - Click to open interactive demonstration
+- **Demo Visualization:** [demo_video_frame.png](demo_video_frame.png)
 
-Or run your own demo:
+The demo shows:
+- Feature extraction from all three modalities
+- Model architecture visualization
+- Sentiment prediction on a -3 to +3 scale
+
+**Run Your Own Demo:**
 ```bash
 python demo_single_sample.py
 ```
+
+This will process a sample from CMU-MOSI and show the complete pipeline in action.
 
 ## 🚀 Quick Start
 
