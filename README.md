@@ -43,8 +43,8 @@ This will process a sample from CMU-MOSI and show the complete pipeline in actio
 
 ```bash
 # Clone the repository
-git clone https://github.com/rayhanros2030/Multimodal-Sentiment-Analysis.git
-cd Multimodal-Sentiment-Analysis
+git clone https://github.com/rayhanros2030/Multimodal_Sentiment_Analysis.git
+cd Multimodal_Sentiment_Analysis
 
 # Install dependencies
 pip install -r requirements.txt
