@@ -151,7 +151,11 @@ Input Features:
 - Weight decay: 0.05
 - Batch size: 32
 
-For a detailed architecture diagram, see the repository files.
+### Architecture Diagram
+
+![Model Architecture](architecture_diagram.png)
+
+The diagram above illustrates the complete architecture flow from input modalities through encoding, cross-modal attention, and fusion to the final sentiment prediction.
 
 ## Results
 
@@ -224,10 +228,16 @@ After training, you'll get:
 
 ### Training Visualization
 
+### Training Visualization
+
+![Training Metrics](mosei_training_metrics.png)
+
 The training process generates comprehensive visualizations:
-- **MAE Plot**: Shows training and validation Mean Absolute Error over 100 epochs
-- **Correlation Plot**: Displays Pearson Correlation progression for both training and validation sets
-- **Training Curves**: Visual representation of model learning progress and overfitting patterns
+- **MAE Plot**: Shows training and validation Mean Absolute Error over 100 epochs, demonstrating the model's learning progression
+- **Correlation Plot**: Displays Pearson Correlation progression for both training and validation sets, showing alignment with ground truth
+- **Training Curves**: Visual representation of model learning progress, validation plateau at correlation 0.48, and test performance achieving 0.4113 correlation with 0.5984 MAE
+
+The graphs show that while training metrics continue to improve throughout 100 epochs, validation metrics plateau early, indicating the model achieves optimal generalization early in training.
 
 ## Contributing
 
