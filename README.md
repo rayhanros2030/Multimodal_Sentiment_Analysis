@@ -2,7 +2,7 @@
 
 A PyTorch implementation of multimodal sentiment analysis using CMU-MOSEI and IEMOCAP datasets. This project combines visual, audio, and text modalities to predict sentiment scores with improved correlation and MAE metrics.
 
-## 🎯 Features
+## Features
 
 - **Multimodal Fusion**: Combines visual (OpenFace2), audio (COVAREP), and text (GloVe) features
 - **Cross-Modal Attention**: Uses attention mechanisms for better feature interaction
@@ -11,7 +11,7 @@ A PyTorch implementation of multimodal sentiment analysis using CMU-MOSEI and IE
 - **Data Quality**: Proper data cleaning and normalization to handle missing/NaN values
 - **No Data Leakage**: Scalers are fitted only on training data and applied to validation/test sets
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.8+
 - PyTorch 2.0+
@@ -19,7 +19,7 @@ A PyTorch implementation of multimodal sentiment analysis using CMU-MOSEI and IE
 
 See `requirements.txt` for full dependencies.
 
-## 🎬 Live Demo
+## Live Demo
 
 **Interactive Demo Available:**
 - **[View Demo in Browser](demo.html)** - Click to open interactive demonstration
@@ -37,7 +37,7 @@ python demo_single_sample.py
 
 This will process a sample from CMU-MOSI and show the complete pipeline in action.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -95,7 +95,7 @@ This will:
 python train_combined_final.py
 ```
 
-## 📊 Model Architecture
+## Model Architecture
 
 - **Input Dimensions**: 
   - Visual: 713 (OpenFace2 features)
@@ -116,7 +116,7 @@ python train_combined_final.py
   - Weight decay: 0.05
   - Batch size: 32
 
-## 📈 Results
+## Results
 
 The model is optimized for:
 - **Correlation**: Target > 0.3990
@@ -124,7 +124,7 @@ The model is optimized for:
 
 Training progress is tracked and visualized with MAE and Correlation plots.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 multimodal-sentiment-analysis/
@@ -140,7 +140,7 @@ multimodal-sentiment-analysis/
 └── .gitignore                   # Git ignore rules
 ```
 
-## 🔧 Key Features
+## Key Features
 
 ### Data Quality
 - Cleans NaN/Inf values instead of filtering samples
@@ -158,7 +158,7 @@ multimodal-sentiment-analysis/
 - Separate plots for MAE and Correlation
 - Train vs Validation comparison
 
-## 📝 Output Files
+## Output Files
 
 After training, you'll get:
 - `best_mosei_model.pth` - Best model weights
@@ -166,19 +166,19 @@ After training, you'll get:
 - `mosei_results.json` - Final test metrics
 - `mosei_metrics_history.json` - Full epoch-by-epoch history
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - CMU-MOSEI dataset: [CMU Multimodal SDK](http://immortal.multicomp.cs.cmu.edu/raw_datasets/processed_data/)
 - IEMOCAP dataset: [IEMOCAP](https://sail.usc.edu/iemocap/)
 
-## 📧 Contact
+## Contact
 
 For questions or issues, please open an issue on GitHub.
