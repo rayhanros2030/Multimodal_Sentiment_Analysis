@@ -228,8 +228,6 @@ After training, you'll get:
 
 ### Training Visualization
 
-### Training Visualization
-
 ![Training Metrics](mosei_training_metrics.png)
 
 The training process generates comprehensive visualizations:
